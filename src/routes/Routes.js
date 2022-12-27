@@ -7,7 +7,7 @@ import Books from '../pages/Books/Books';
 export default function Routes() {
   return (
     <Switch>
-      <Route path="/books" exact component={Books} />
+      <Route path="/" exact component={Books} />
     </Switch>
   );
 }

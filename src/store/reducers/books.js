@@ -3,9 +3,7 @@ export default function booksReducer(state = [], action) {
     case 'GET_BOOKS':
       return action.payload;
     case 'UPDATE_BOOK_SHELF_STATUS':
-      let current = action.payload.data.currentlyReading;
-      let want = action.payload.data.wantToRead;
-      let read = action.payload.data.read;
+      let { currentlyReading: current, wantToRead:  want, read } = action.payload.data;
 
       return state.concat(current, want, read);
     case 'SEARCH_BOOK':
